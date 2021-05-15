@@ -1,0 +1,19 @@
+mixed-port: 7890
+redir-port: 7892
+authentication: [""]
+allow-lan: true
+mode: Rule
+log-level: info
+ipv6: false
+external-controller: :9999
+external-ui: ui
+secret: 
+tun: {enable: false}
+experimental: {ignore-resolve-fail: true, interface-name: en0}
+dns: {enable: true, ipv6: true, listen: 0.0.0.0:1053, use-hosts: true, enhanced-mode: redir-host, nameserver: [114.114.114.114, 223.5.5.5], fallback: [1.0.0.1, 8.8.4.4], fallback-filter: {geoip: true}}
+store-selected: false
+#用于编写自定义设定(可参考https://lancellc.gitbook.io/clash)，例如
+#port: 7890
+#hosts:
+#   '*.clash.dev': 127.0.0.1 
+#   'alpha.clash.dev': ::1
